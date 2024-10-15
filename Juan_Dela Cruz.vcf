@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+ADR:;;Street name;City name;state;1234;Australia
+EMAIL;TYPE=INTERNET:jdelacruz@yahoo.com
+FN:Juan Dela Cruz
+N:Dela Cruz;Juan;;;
+ORG:My Organization
+TEL;TYPE=CELL:+1 005 69852 12
+TITLE:My Title
+END:VCARD
