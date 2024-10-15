@@ -41,7 +41,17 @@ def generate_vcard(first_name, last_name, phone, email, organization, title, add
         box_size=10,
         border=4,
     )
-    
+    qr.add_data(vcard_str)
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color="black", back_color="white")
+
+    qr_filename = f"{first_name}_{last_name}_vcard_qr.png"
+    img.save(qr_filename)
+
+    vcard_filename = f"{first_name}_{last_name}.vcf"
+    with open(vcard_filename, 'w') as f:
+        f.write(vcard_str)
 
     print(f"vCard for {first_name} {last_name} has been created.")
     print(f"QR code has been saved as {qr_filename}.")
